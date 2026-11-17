@@ -1,0 +1,25 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage{booktabs,tabularx,hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\begin{document}
+\begin{center}{\Large\bfseries Gate G1 --- One-Page Research Brief}\\[3pt]
+AI Tools for Research | RSI2026510 | 17 November 2026\end{center}
+\small
+\begin{tabularx}{\textwidth}{p{3.05cm}X}\toprule
+\textbf{Field} & \textbf{Verified study plan and executed scope}\\\midrule
+Review topic & Benchmarking AutoML and Agentic Pipelines Against Expert-Tuned Models on Small Datasets (prior course literature review).\\
+Literature link & AMLB (Gijsbers et al., JMLR 2024) motivates controlled benchmarking; Varma and Simon (2006) motivate nested CV; Optuna (Akiba et al., 2019) provides sampler infrastructure.\\
+Gap / motivation & Model-selection variance and cost can compromise small-data comparisons. This is a verified methodological concern, not an independently established novelty claim.\\
+Primary question & Under fixed outer test folds and the same inner validation partitions, how does small-budget automated search compare with fixed and grid-tuned classifiers?\\
+Pathway & B. Controlled comparative study; explicitly excludes unimplemented full AutoML and LLM agents.\\
+Primary data & Breast Cancer (569 rows, 30 features), Wine (178, 13), Iris (150, 4). Supplementary: Digits600 flattened image-derived vectors, not semantically tabular.\\
+Methods & Fixed Logistic Regression; fixed Random Forest; 12-candidate grid-tuned RBF-SVM; Optuna random search 12 trials; Optuna TPE 12 trials and its four-trial startup prefix.\\
+Protocol & Seeds 42 and 123; three stratified outer folds per seed; three shared stratified inner folds for selection; fold-local preprocessing; outer test sets never tuned on.\\
+Measures & Primary balanced accuracy, secondary macro-F1, per-fold search/refit time, dataset dependence, startup-versus-full-budget behavior.\\
+Compute and risks & Linux CPU in recorded environment; Optuna/scikit-learn dependencies. Two seeds and three tabular tasks limit generalization; different model fits mean equal trial count is not equal compute.\\
+Executed milestone & Benchmark executed, prediction-level verification PASS, full log/CSV files preserved; plots and paper generated from actual measurements.\\
+\bottomrule
+\end{tabularx}
+\vspace{4pt}\textbf{Evidence:} `results/fold\_metrics.csv`, `results/predictions.csv`, `results/search\_trial\_logs.csv`, `results/verification\_report.json`. No institutional similarity or AI-writing report is claimed.
+\end{document}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "n_dataset_tasks": 4,
+  "n_seeds": 2,
+  "n_outer_evaluations": 24,
+  "n_method_evaluations": 144,
+  "n_test_predictions": 17964,
+  "n_logged_search_trials": 576,
+  "verified": "Metric recomputation; data labels; duplicate and missing rows; held-out fold alignment across methods; all test indices covered once per seed/method; exact search-trial counts; finite values"
+}

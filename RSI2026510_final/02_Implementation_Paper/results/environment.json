@@ -1,0 +1,19 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "sklearn": "1.8.0",
+  "optuna": "4.8.0",
+  "random_seeds": [
+    42,
+    123
+  ],
+  "outer_cv_splits": 3,
+  "inner_cv_splits": 3,
+  "search_trials": 12,
+  "TPE_startup_random_trials": 4,
+  "timing_note": "Fixed models fit only; tuned models include inner CV search plus full-train refit; CPU model runtimes not equal-budget, use cautiously",
+  "no_agent_or_full_AutoML": true,
+  "dataset_note": "Digits600 is derived from an image-recognition dataset, not conventional semantically tabular observations"
+}

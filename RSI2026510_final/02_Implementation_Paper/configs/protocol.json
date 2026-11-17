@@ -1,0 +1,17 @@
+{
+  "primary_datasets": ["BreastCancer", "Wine", "Iris"],
+  "supplementary_dataset": "Digits600",
+  "random_seeds": [42, 123],
+  "outer_cv": "StratifiedKFold(3,shuffle=True,random_state=seed)",
+  "inner_cv": "StratifiedKFold(3,shuffle=True,random_state=seed+fold*101), shared across tuned methods",
+  "primary_metric": "balanced_accuracy",
+  "secondary_metrics": ["macro_f1", "accuracy", "search_and_refit_s"],
+  "reference_methods": ["LogReg", "RandomForest", "TunedSVM"],
+  "search_methods": ["Random12", "TPE4", "TPE12"],
+  "search_space": ["SVM RBF", "RandomForest"],
+  "automated_trials": 12,
+  "TPE_startup_random_trials": 4,
+  "human_expert_evaluation": false,
+  "LLM_agent_executed": false,
+  "full_AutoML_executed": false
+}

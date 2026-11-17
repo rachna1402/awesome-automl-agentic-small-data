@@ -1,0 +1,5 @@
+dataset,n_samples,n_features,n_classes,min_class_count,data_source,data_type
+BreastCancer,569,30,2,212,scikit-learn built-in; digits is stratified 600-sample subset,numerical tabular
+Wine,178,13,3,48,scikit-learn built-in; digits is stratified 600-sample subset,numerical tabular
+Iris,150,4,3,50,scikit-learn built-in; digits is stratified 600-sample subset,numerical tabular
+Digits600,600,64,10,58,scikit-learn built-in; digits is stratified 600-sample subset,flattened image-derived feature vectors
